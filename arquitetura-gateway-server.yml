@@ -14,14 +14,8 @@ eureka:
     wait-time-in-ms-when-sync-empty: 3000
 
 spring:
-  cloud:
-    gateway:
-      routes:
-      - id: delivery-service
-        uri: http://localhost:9093/
-        predicates:
-        - Path=/api/orders/**
-      - id: provider-service
-        uri: http://localhost:9094/
-        predicates:
-        - Path=/api/providers**
+    cloud:
+        gateway:
+            discovery:
+                locator:
+                    enabled: true
