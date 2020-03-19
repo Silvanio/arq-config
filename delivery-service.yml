@@ -19,7 +19,7 @@ spring:
         username: postgres
         password: root
         platform: postgresql
-        url: jdbc:postgresql://localhost:5432/arquitetura_ms
+        url: jdbc:postgresql://localhost:5432/arquiteturams
         
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQL9Dialect
