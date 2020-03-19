@@ -23,13 +23,14 @@ spring:
       - id: delivery-service
         uri: lb://delivery-service
         predicates:
-        - Path=/api/orders/**
+        - Path=/delivery/**
         filters:
-        - RewritePath=/delivery/(?<path>.*), /$\{path}
+        - RewritePath=/delivery/(?.*), /$\{path}
         
       - id: provider-service
         uri: lb://provider-service
         predicates:
         - Path=/api/providers**
-        
+        filters:
+        - RewritePath=/api/providers**
         
