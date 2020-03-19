@@ -20,14 +20,12 @@ spring:
         locator:
           enabled: true  
       routes:
-      - id: delivery-service
+      - id: delivery-service-api
         uri: lb://delivery-service
         predicates:
-        - Path=/delivery/**
-        filters:
-        - RewritePath=/delivery/(?.*), /$\{path}
+        - Path=/api/orders**
         
-      - id: provider-service
+      - id: provider-service-api
         uri: lb://provider-service
         predicates:
         - Path=/api/providers**
