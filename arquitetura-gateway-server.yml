@@ -19,15 +19,5 @@ spring:
       discovery:
         locator:
           enabled: true  
-      routes:
-      - id: delivery-service-api
-        uri: lb://delivery-service
-        predicates:
-        - Path=/api/orders**
-        
-      - id: provider-service-api
-        uri: lb://provider-service
-        predicates:
-        - Path=/api/providers**
-   
+ 
         
