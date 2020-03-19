@@ -24,6 +24,8 @@ spring:
         uri: lb://delivery-service
         predicates:
         - Path=/api/orders/**
+        filters:
+        - RewritePath=/delivery/(?<path>.*), /$\{path}
         
       - id: provider-service
         uri: lb://provider-service
