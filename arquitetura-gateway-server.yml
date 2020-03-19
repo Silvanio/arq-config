@@ -1,7 +1,6 @@
 server:
-  port: 9092
-  
-  
+  port: 9192
+
 eureka:
   instance:
     hostname: localhost
