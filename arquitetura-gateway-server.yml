@@ -1,5 +1,5 @@
 server:
-  port: 9192
+  port: 9092
 
 eureka:
   instance:
@@ -17,9 +17,11 @@ spring:
   cloud:
     gateway:
       routes:
-        id: api-delivery-service
+      - id: delivery-service
         uri: http://localhost:9093/
-        predicates: Path=/api/orders/**
-        id: api-provider-service
+        predicates:
+        - Path=/api/orders/**
+      - id: provider-service
         uri: http://localhost:9094/
-        predicates: Path=/api/providers/**
+        predicates:
+        - Path=/api/orders/**
