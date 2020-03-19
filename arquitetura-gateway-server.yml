@@ -31,6 +31,5 @@ spring:
         uri: lb://provider-service
         predicates:
         - Path=/api/providers**
-        filters:
-        - RewritePath=/api/providers**
+   
         
