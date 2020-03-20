@@ -21,11 +21,11 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-      - id: delivery-service
+      - id: api-delivery-service
         uri: http://localhost:9093/
         predicates:
         - Path=/api/orders/**
-      - id: provider-service
+      - id: api-provider-service
         uri: http://localhost:9094/
         predicates:
         - Path=/api/providers/**
