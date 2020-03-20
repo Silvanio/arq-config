@@ -22,10 +22,10 @@ spring:
           lower-case-service-id: true
       routes:
       - id: api-delivery-service
-        uri: lb//delivery-service
+        uri: lb://delivery-service
         predicates:
         - Path=/api/orders/**
       - id: api-provider-service
-        uri: lb//provider-service
+        uri: lb://provider-service
         predicates:
         - Path=/api/providers/**
