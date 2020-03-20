@@ -27,10 +27,3 @@ spring:
         hibernate:
             ddl-auto: update
         show-sql: true
-spring:
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
