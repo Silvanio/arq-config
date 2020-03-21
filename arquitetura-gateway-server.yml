@@ -19,13 +19,12 @@ spring:
       discovery:
         locator:
           enabled: true
-          lower-case-service-id: true
       routes:
-      - id: api-delivery-service
+      - id: delivery-service
         uri: lb://delivery-service
         predicates:
         - Path=/api/orders/**
-      - id: api-provider-service
-        uri: lb://PROVIDER-SERVICE
+      - id: provider-service
+        uri: lb://provider-service
         predicates:
         - Path=/api/providers/**
